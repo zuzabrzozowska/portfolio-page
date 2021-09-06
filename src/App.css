@@ -1,38 +1,251 @@
-.App {
-  text-align: center;
+:root {
+  --eggshell: #fff2e2;
+  --beige: #e8bd97;
+  --yellow: #fbf898;
+  --pink: #fed7e1;
+  --small: 12px;
+  --medium: 18px;
+  --large: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--beige);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+h1 {
+  /* font-family: 'Roboto', sans-serif; */
+  font-size: 20px;
+  font-weight: bold;
+  padding: 30px 0;
+}
+
+li {
+  font-family: "Roboto", sans-serif;
+}
+
+/* wrapper */
+
+.page {
+  background-color: var(--eggshell);
+  transition: background-color 0.5s ease;
   min-height: 100vh;
+}
+
+.bg-beige {
+  background-color: var(--beige);
+}
+
+.bg-eggshell {
+  background-color: var(--eggshell);
+}
+
+/* scroll up */
+
+.back-to-top {
+  position: fixed;
+  width: 109px;
+  height: 85px;
+  right: 50px;
+  bottom: 50px;
+  margin: 0;
+  visibility: hidden;
+  z-index: 9999;
+}
+
+.back-to-top .visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top .invisible {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top-icon {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 26px 10px 20px;
+  line-height: 1;
+  text-align: center;
+  height: 100%;
+  background-color: var(--yellow);
+  border-radius: 100%;
+  overflow: hidden;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out,
+    border-color 0.2s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.back-to-top:hover .back-to-top-icon {
+  color: #000;
+  background-color: var(--pink);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* left */
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+}
+
+.img-sidebar {
+  height: 250px;
+  width: 250px;
+  background-image: url("./assets/photos/standing.png");
+  background-position: center; /* Center the image */
+  background-size: contain; /* Resize the background image to cover the entire container */
+}
+
+.text-uppercase {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+}
+
+/* right */
+.content {
+  padding: 40px 100px;
+}
+
+.hover-wrapper {
+  overflow:hidden;
+  position: relative;
+  margin: 0 20px 20px 0;
+}
+
+.hover-wrapper img {
+  border-radius: 10px;
+}
+
+.hover-wrapper img:last-child {
+  opacity: 0;
+  position: absolute;
+  left: 5px;
+}
+
+.hover-wrapper:hover img:last-child {
+  opacity: 1;
+  transform: translateX(-5px);
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.hover-wrapper:hover img:first-child {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(5px);
+  transition: opacity 0.8s ease, transform 0.4s ease-out;
+}
+
+.crazy-link {
+  border-bottom: 1px solid var(--beige);
+  color: var(--dark);
+  padding-bottom: .25em;
+  text-decoration: none;
+}
+
+.crazy-link:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: .3em;
+  text-decoration: none;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.ml-3 {
+  margin-left: 30px;
+}
+
+.ml-4 {
+  margin-left: 40px;
+}
+
+.ml-5 {
+  margin-left: 50px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.mr-2 {
+  margin-right: 20px;
+}
+
+.mr-3 {
+  margin-right: 30px;
+}
+
+.mr-4 {
+  margin-right: 40px;
+}
+
+.mr-5 {
+  margin-right: 50px;
+}
+
+.text-small {
+  font-size: var(--small);
+}
+
+.text-medium {
+  font-size: var(--medium);
+}
+
+.text-large {
+  font-size: var(--large);
+}
+
+.text-underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.accent-font {
+  font-family: 'Kaisei Tokumin', serif;
 }
