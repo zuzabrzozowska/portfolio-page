@@ -12,7 +12,7 @@ const Work = () => {
     <div className="page-padding">
       <div style={{ minHeight: "100vh" }}>
         <h1
-          className="text-cursive text-center"
+          className="text-cursive text-center hide-mobile"
           style={{ color: "var(--pink)", fontSize: "24px" }}
         >
           zuzanna
@@ -20,7 +20,7 @@ const Work = () => {
           brzozowska
         </h1>
 
-        <h2 className="text-serif text-center mt-3 ml-5 mr-5 action-call">
+        <h2 className="text-serif action-call">
           full stack developer. born in płock{" "}
           <a
             href="https://en.wikipedia.org/wiki/P%C5%82ock"
@@ -31,12 +31,12 @@ const Work = () => {
           </a>
           , based in stockholm. loves writing by hand,
           <div className="ml-1 img-text img-text--2" />
-          old movie posters, and going to bed early<span className="">.</span>
+          old movie posters, going to bed early and afternoon tea
           <span className="little-pink-text little-pink-text--1">
-            small text here
+            black with a splash
           </span>
           <span className="little-pink-text little-pink-text--2">
-            to explain something.
+            of milk, no sugar.
           </span>
         </h2>
       </div>

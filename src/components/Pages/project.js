@@ -104,8 +104,7 @@ const ProjectPage = ({ history, location }) => {
                     backgroundRepeat: "no-repeat",
                     float: i % 2 === 1 ? "right" : "left",
                     height: "300px",
-                    //width: "500px",
-                    maxWidth: '100%',
+                    width: "500px", // <-- unresponsive
                     borderRadius: "10px",
                   }}
                 />

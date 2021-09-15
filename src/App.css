@@ -10,19 +10,24 @@
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+}
 
 body {
   position: relative;
@@ -48,10 +53,9 @@ button {
 
 @media only screen and (max-width: 760px) {
   .hide-mobile {
-    opacity: 0;
+    display: none;
   }
 }
-
 
 .page-padding {
   padding: 20px 10px;
@@ -83,7 +87,7 @@ span {
 }
 
 .text-serif {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .text-cursive {
@@ -198,20 +202,8 @@ footer span,
   font-size: 70px;
   letter-spacing: 1px;
   line-height: 75px;
-}
-@media screen and (max-width: 760px ) {
-  .action-call {
-    font-size: 50px;
-    line-height: normal;
-  }
-  .img-text--1 {
-    height: 60px;
-    width: 40px;
-  }
-  .img-text--2 {
-    height: 40px;
-    width: 65px;
-  }
+  margin: 30px 70px 0;
+  text-align: center;
 }
 
 .img-text {
@@ -269,20 +261,38 @@ footer span,
   }
 }
 
-.little-pink-text {
-  opacity: 0;
-  
+.img-text--2 {
+  height: 65px;
+  width: 93px;
+  background-size: cover;
+  background-image: url("/src/assets/pug.png");
+  margin-right: 10px;
 }
 
-@media only screen and (min-width: 800px) {
-  .little-pink-text {
-    opacity: 1;
-    position: absolute;
-    color: var(--pink);
-    font-family: "Beth Ellen", cursive;
-    margin-left: 20px;
-    font-size: var(--small);
+@media screen and (max-width: 760px) {
+  .action-call {
+    font-size: 35px;
+    line-height: normal;
+    text-align: left;
+    margin: 80px 0 0 0;
   }
+  .img-text--1 {
+    height: 60px;
+    width: 50px;
+  }
+  .img-text--2 {
+    height: 45px;
+    width: 65px;
+  }
+}
+
+.little-pink-text {
+  position: absolute;
+  display: inline;
+  color: var(--pink);
+  font-family: "Beth Ellen", cursive;
+  margin-left: 20px;
+  font-size: var(--small);
 }
 
 .little-pink-text--1 {
@@ -292,11 +302,15 @@ footer span,
   line-height: 100px;
 }
 
-.img-text--2 {
-  height: 65px;
-  width: 93px;
-  background-size: cover;
-  background-image: url("/src/assets/pug.png");
+@media only screen and (max-width: 760px) {
+  .little-pink-text {
+    position: relative;
+    display: block;
+    margin: 0;
+  }
+  .little-pink-text--1, .little-pink-text--2 {
+    line-height: normal;
+  }
 }
 
 .img-project {
@@ -308,10 +322,11 @@ footer span,
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 760px ) {
+@media screen and (max-width: 760px) {
   .img-project {
     max-width: 100%;
-    background-size: contain;
+    background-size: center;
+    /* background-size: contain; */
   }
 }
 
@@ -352,6 +367,18 @@ footer span,
   left: 0;
   position: "absolute";
   z-index: 0;
+}
+
+.h1-about {
+  margin-top: 50px;
+  font-size: var(--large);
+  color: var(--darkblue);
+}
+@media screen and (max-width: 760px) {
+  .h1-about {
+    margin-top: 0;
+    font-size: 35px;
+  }
 }
 
 .z-index {

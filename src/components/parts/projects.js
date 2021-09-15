@@ -35,7 +35,7 @@ const Projects = ({ location }) => {
   }, [location])
 
   return (
-    <div id="projects" ref={wrapperRef} className="row mt-5">
+    <div id="projects" ref={wrapperRef} className={`row mr-0 ml-0 mt-5"`}>
       {projects.map((project, i) => (
         <ProjectItem project={project} key={i} />
       ))}

@@ -5,13 +5,12 @@ const Nav = ({ location }) => {
   const isOn = (url) => location && location.pathname === url;
   const onProject = location.pathname.includes('/project/')
   const onHome = isOn("/");
-  const [showNav, setShowNav] = useState(!onHome);
+  const mobile = window.innerWidth < 768
+  const [showNav, setShowNav] = useState(mobile || !onHome);
   const [transparent, setTransparent] = useState(onProject)
 
-  console.log(onProject)
-
   useEffect(() => {
-    onHome ? setShowNav(false) : setShowNav(true);
+    onHome && !mobile ? setShowNav(false) : setShowNav(true);
     onProject ? setTransparent(true) : setTransparent(false)
 
     document.addEventListener("scroll", handleScroll);
@@ -21,7 +20,7 @@ const Nav = ({ location }) => {
   }, [location]);
 
   const handleScroll = () => {
-    if (!onHome) return;
+    if (!onHome || mobile) return;
     if (window.scrollY === 0) {
       setShowNav(false);
     }
@@ -32,7 +31,7 @@ const Nav = ({ location }) => {
 
   return (
     <nav className={`page-padding ${showNav ? "" : "d-none"} ${transparent ? 'bg-transparent' : ''}`}>
-      <Link to="/" className="text-cursive text-medium" style={{ color: "var(--pink)" }}>
+      <Link to="/" className="text-cursive text-small" style={{ color: "var(--pink)" }}>
         zuzanna
         <br />
         brzozowska

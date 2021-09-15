@@ -6,15 +6,12 @@ const About = () => {
   return (
     <div className="row mt-5 mb-5 page-padding m-0">
       <div className="col-md">
-        <h1
-          className="mt-5 text-serif text-large"
-          style={{ color: "var(--darkblue)" }}
-        >
+        <h1 className="text-serif h1-about">
           i’m Zuzanna, a full stack developer
           <br />
           currently based in Stockholm, Sweden.
         </h1>
-        <p className="text-medium mr-1 text-bold">some facts about me!</p>
+        <p className="mr-1 text-bold text-uppercase text-medium ">some facts about me!</p>
         <span className="text-bold">
           I've lived in Gdańsk, Kraków, Växjö and Stockholm.
           <br />I studied Swedish language and litterature but decided to switch
@@ -24,7 +21,7 @@ const About = () => {
           <br />
           I'm responsible for the full lifecycle of our web-based platform as
           well as our native app (on both Android and iOS).
-          <br />
+          <br /><br />
           My interests include film studies, art history and learning Italian.
           <br />
           You can reach me at{" "}
