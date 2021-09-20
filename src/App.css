@@ -94,6 +94,14 @@ span {
   font-family: "Beth Ellen", cursive;
 }
 
+.text-blue {
+  color: var(--darkblue);
+}
+
+.text-pink {
+  color: var(--pink);
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -200,7 +208,6 @@ footer span,
   position: relative;
   color: var(--darkblue);
   font-size: 70px;
-  letter-spacing: 1px;
   line-height: 75px;
   margin: 30px 70px 0;
   text-align: center;
@@ -217,6 +224,7 @@ footer span,
   width: 70px;
   background-size: contain;
   background-image: url("/src/assets/plock.png");
+  /* background-image: url("/src/assets/pierog.png"); */
 }
 
 .bounce {
@@ -263,9 +271,10 @@ footer span,
 
 .img-text--2 {
   height: 65px;
-  width: 93px;
+  width: 50px;
+  transform: rotate(-10deg);
   background-size: cover;
-  background-image: url("/src/assets/pug.png");
+  background-image: url("/src/assets/poster.jpeg");
   margin-right: 10px;
 }
 
@@ -282,7 +291,7 @@ footer span,
   }
   .img-text--2 {
     height: 45px;
-    width: 65px;
+    width: 35px;
   }
 }
 
@@ -328,22 +337,6 @@ footer span,
     background-size: center;
     /* background-size: contain; */
   }
-}
-
-.img-project--1 {
-  background-image: url("/src/assets/projects/codehouse.png");
-}
-
-.img-project--2 {
-  background-image: url("/src/assets/projects/wetal-profile.png");
-}
-
-.img-project--3 {
-  background-image: url("https://c0.wallpaperflare.com/preview/633/625/255/laptop-macbook-computer-work.jpg");
-}
-
-.img-project--4 {
-  background-image: url("https://designshack.net/wp-content/uploads/how-to-customize-a-website-mockup-template.jpg");
 }
 
 .img-project-big {

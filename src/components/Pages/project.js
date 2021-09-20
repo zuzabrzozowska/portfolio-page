@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, withRouter, Link } from "react-router-dom";
 import projects from "../../assets/projects/projectsList";
-import Image from "../../assets/projects/wetal-profile.png";
 
 const ProjectPage = ({ history, location }) => {
   const { id } = useParams();
@@ -25,7 +24,7 @@ const ProjectPage = ({ history, location }) => {
           position: "fixed",
           top: 0,
           left: 0,
-          backgroundImage: `url(${Image})`,
+          backgroundImage: `url(${chosenProject.image2 || chosenProject.image})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -62,10 +61,10 @@ const ProjectPage = ({ history, location }) => {
               <i className="fa fa-arrow-left text-medium" />
             </a>
           </div>
-          <div className="row mt-5">
+          <div className="row mt-5 mb-5">
             <div className="col-4">
               <p className="text-uppercase">role</p>
-              <p>Full Stack Developer</p>
+              <p>{chosenProject.role || 'Full Stack Developer'}</p>
               {chosenProject.stack && (
                 <>
                   <p className="text-uppercase mt-3">stack</p>
@@ -79,27 +78,24 @@ const ProjectPage = ({ history, location }) => {
             </div>
             <div className="col-8">
               <p className="text-bold">
-                {chosenProject.description} {chosenProject.description}{" "}
-                {chosenProject.description} {chosenProject.description}{" "}
                 {chosenProject.description}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-5 bg-white">
+        <div className="bg-white">
           <div className="page-padding">
-            <h2 className="mb-2 text-serif action-call text-large text-center">
+            <h2 className="mb-5 mb-5 text-serif action-call text-large text-center">
               feature overview
             </h2>
 
             {chosenProject.gallery.map((item, i) => (
               <div className="d-inline-block mb-5">
                 <div
-                  className="shadow"
                   style={{
                     backgroundImage: `url(${item.img})`,
-                    backgroundSize: "cover",
+                    backgroundSize: "contain",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     float: i % 2 === 1 ? "right" : "left",
@@ -112,7 +108,7 @@ const ProjectPage = ({ history, location }) => {
                   className="d-flex flex-column justify-content-center"
                   style={{ height: "300px" }}
                 >
-                  <p className="ml-3 mr-3 text-medium text-bold">
+                  <p className="ml-3 mr-3 mb-2 text-medium text-bold">
                     {item.title}
                   </p>
                   <p className="ml-3 mr-3 text-bold">{item.text}</p>
@@ -122,14 +118,14 @@ const ProjectPage = ({ history, location }) => {
           </div>
         </div>
 
-        <div className="mt-5 mb-5 d-flex justify-content-center">
+        <div className="mt-5 mb-5 p-5 d-flex justify-content-center">
           <a
-            href=""
+            href={chosenProject.link}
             target="_blank"
             className="text-serif text-large"
             style={{ borderBottomWidth: ".5px", borderStyle: "solid" }}
           >
-            check more information here
+            check out more information here
           </a>
         </div>
 
@@ -142,12 +138,12 @@ const ProjectPage = ({ history, location }) => {
               style={{
                 cursor: "pointer",
                 display: window.innerWidth > 768 && "inline-block",
-                backgroundImage: `url(${p.gallery[i].img})`,
+                backgroundImage: `url(${p.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 height: "250px",
-                width: window.innerWidth > 768 && "25%",
+                width: window.innerWidth > 768 && "33%",
                 position: "relative",
               }}
             >

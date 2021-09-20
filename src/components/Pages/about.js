@@ -17,10 +17,10 @@ const About = () => {
           <br />I studied Swedish language and litterature but decided to switch
           to coding.
           <br />
-          At the moment, I'm a Full Stack Developer at WeTal.
+          At the moment, I'm a Full Stack Developer at WeTal and a Lead Developer in a team of three.
           <br />
           I'm responsible for the full lifecycle of our web-based platform as
-          well as our native app (on both Android and iOS).
+          well as our native app (Android and iOS).
           <br /><br />
           My interests include film studies, art history and learning Italian.
           <br />
