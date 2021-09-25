@@ -42,11 +42,11 @@ const projectsList = [
 				text:
 					'There are speakers and audience that listens to the talk. One of the speakers is also the talk show host, so if you wanna say something, raise your hand! The hosts will be able to approve or deny your request to become a speaker.'
 			},
-      {
+			{
 				title: 'Testing the feature in production, with my own tech talk!',
 				img: MyTalk,
 				text:
-					'In a startup there isn\'t a better way of testing a feature then releasing it ASAP and hope for the best. That is why I was the star of a few of the first tech talks on CodeHouse.'
+					"In a startup there isn't a better way of testing a feature then releasing it ASAP and hope for the best. That is why I was the star of a few of the first tech talks on CodeHouse."
 			},
 
 			{
@@ -57,8 +57,7 @@ const projectsList = [
 			},
 			{
 				title: 'Push notification',
-				img:
-					CodeHouseBG,
+				img: CodeHouseBG,
 				text:
 					'Ten minutes before an event, you will get a notification that a talk is about to start. I built the push notification service using Firebase Cloud Messaging and backend in Node.js (Express).'
 			}
@@ -68,7 +67,7 @@ const projectsList = [
 		category: 'mobile development',
 		title: 'wetal native app',
 		image: WeTalProfile,
-    	image2: WeTalApp,
+		image2: WeTalApp,
 		year: 'March 2021 - now',
 		role: 'Full Stack Developer / Project Owner',
 		description:
@@ -86,14 +85,13 @@ const projectsList = [
 			{
 				title: 'Checking the best jobs in your area...',
 				img: AppSearch,
-				text:
-					'The algorithm checks what jobs suit you the most based on your pre-set filters.'
+				text: 'The algorithm checks what jobs suit you the most based on your pre-set filters.'
 			},
 			{
 				title: 'Deployment and distribution to app stores',
 				img: AppStore,
 				text:
-					'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+					'Check out the app on both App Store and Google Play.'
 			}
 		]
 	},
@@ -119,19 +117,19 @@ const projectsList = [
 				title: 'Look at all the cool companies',
 				img: CompaniesGif,
 				text:
-					'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+					'WeTal tries to cherry-pick the most exciting companies in the Stockholm area to keep the job ads as attractive as possible.'
 			},
 			{
 				title: 'This job looks good!',
 				img: JobsGif,
 				text:
-					'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+					'Browse job page and apply to those that you find the most interesting.'
 			},
-      {
-				title: 'Swipe left or right and find the job of your dreams.',
+			{
+				title: 'Match or reject',
 				img: Swiping,
 				text:
-					'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+					'Click the Nope or Yes buttons, and all that is left to do is wait for the comapany to match with you back.'
 			}
 		]
 	},
@@ -144,7 +142,7 @@ const projectsList = [
 			'Soon available on App Store and Google Play. Lets you set your alarm to wake you up every day, at sunrise, no matter your location. I made this app inspired by long winter nights living Sweden. I got tired of checking sunrise time in the wintertime, always wanting to wake up after the sun has risen. I decided to create an alarm that will wake me up everyday after sunrise.',
 		url: 'sunrise-alarm',
 		stack: [ 'React Native', 'Expo (Bare Workflow)', 'JavaScript' ],
-    link: 'https://github.com/zuzabrzozowska/sunrise-app',
+		link: 'https://github.com/zuzabrzozowska/sunrise-app',
 		gallery: [
 			{
 				title: 'Getting sunrise times from API',
