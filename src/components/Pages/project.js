@@ -18,7 +18,7 @@ const ProjectPage = ({ history, location }) => {
     return <h1 className="text-danger">Could not find the project.</h1>;
 
   return (
-    <div className="mb-5">
+    <div className="mb-5 overflow-hidden">
       <div
         style={{
           position: "fixed",
@@ -116,10 +116,8 @@ const ProjectPage = ({ history, location }) => {
           <a
             href={chosenProject.link}
             target="_blank"
-            className="text-serif text-large"
-            style={{ borderBottomWidth: ".5px", borderStyle: "solid" }}
           >
-            check out more information here
+            <span className="text-serif text-large text-center" style={{ borderBottomWidth: "1.5px", borderStyle: "solid", lineHeight: "inherit" }}>check out more information here</span>
           </a>
         </div>}
 

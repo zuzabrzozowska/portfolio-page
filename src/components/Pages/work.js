@@ -5,6 +5,7 @@ import BabyArrow from "../../assets/arrow.png";
 const Work = () => {
   const plockRef = useRef(null);
   const [showBlur, setShowBlur] = useState(true)
+  const mobile = window.innerWidth < 768
 
   const removeAnimation = () => {
     plockRef.current.classList.remove("bounce");
@@ -42,10 +43,9 @@ const Work = () => {
 
           <h2 className="text-serif action-call">
             full stack developer. born
-            {window.innerWidth > 768 ? <br /> : <> </>}in płock{" "}
+            {!mobile ? <br /> : <> </>}in płock{" "}
             <a
               href="https://en.wikipedia.org/wiki/P%C5%82ock"
-              // href="https://en.wikipedia.org/wiki/Pierogi"
               target="_blank"
               onMouseLeave={removeAnimation}
             >

@@ -356,13 +356,13 @@ footer span,
     width: 35px;
   }
   .tea-text-wrapper {
-    position: relative;
-    display: block;
+    top: 0;
+    position: initial;
   }
   .img-project {
     max-width: 100%;
-    background-size: center;
-    /* background-size: contain; */
+    height: 200px;
+    border-radius: 5px;
   }
   .h1-about {
     margin-top: 0;

@@ -10,8 +10,9 @@ const Nav = ({ location }) => {
   const [transparent, setTransparent] = useState(onProject)
 
   useEffect(() => {
-    onHome && !mobile ? setShowNav(false) : setShowNav(true);
-    onProject && !mobile ? setTransparent(true) : setTransparent(false)
+
+    setShowNav(!(onHome && !mobile)) // dont show Nav on home 
+    setTransparent(onProject && !mobile)
 
     document.addEventListener("scroll", handleScroll);
     return () => {
