@@ -14,18 +14,15 @@ const About = () => {
         <p className="mr-1 text-bold text-uppercase text-medium ">some facts about me!</p>
         <span className="text-bold">
           I've lived in Gdańsk, Kraków, Växjö and Stockholm.
-          <br />I studied Swedish language and litterature but decided to switch
-          to coding.
           <br />
-          At the moment, I'm a Full Stack Developer at WeTal and a Lead Developer in a team of three.
           <br />
-          I'm responsible for the full lifecycle of our web-based platform as
+          At the moment, I'm a Full Stack Developer at WeTal and a Lead Developer in a team of three. I'm responsible for the full lifecycle of our web-based platform as
           well as our native app (Android and iOS).
           <br /><br />
           My interests include film studies, art history and learning Italian.
           <br />
           You can reach me at{" "}
-          <a href="mailto:zuzabrzozowska@gmail.com">zuzabrzozowska@gmail.com</a>
+          <a href="mailto:zuzabrzozowska@gmail.com" className="text-underline">zuzabrzozowska@gmail.com</a>
           , so say hello! ✨
         </span>
       </div>

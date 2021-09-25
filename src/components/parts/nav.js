@@ -11,7 +11,7 @@ const Nav = ({ location }) => {
 
   useEffect(() => {
     onHome && !mobile ? setShowNav(false) : setShowNav(true);
-    onProject ? setTransparent(true) : setTransparent(false)
+    onProject && !mobile ? setTransparent(true) : setTransparent(false)
 
     document.addEventListener("scroll", handleScroll);
     return () => {

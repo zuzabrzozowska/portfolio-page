@@ -56,7 +56,7 @@ const ProjectPage = ({ history, location }) => {
           <p className="text-bold text-medium text-center">
             {chosenProject.category}
           </p>
-          <div className="float-left">
+          <div className="float-left mt-4">
             <a onClick={goBack} style={{ cursor: "pointer" }}>
               <i className="fa fa-arrow-left text-medium" />
             </a>
@@ -74,7 +74,7 @@ const ProjectPage = ({ history, location }) => {
                 </>
               )}
               <p className="text-uppercase mt-3">year</p>
-              <p>2021</p>
+              <p>{chosenProject.year}</p>
             </div>
             <div className="col-8">
               <p className="text-bold">
@@ -84,25 +84,19 @@ const ProjectPage = ({ history, location }) => {
           </div>
         </div>
 
-        <div className="bg-white">
+        <div className="bg-white pb-4">
           <div className="page-padding">
             <h2 className="mb-5 mb-5 text-serif action-call text-large text-center">
               feature overview
             </h2>
 
             {chosenProject.gallery.map((item, i) => (
-              <div className="d-inline-block mb-5">
+              <div className="project-image-wrapper mb-5">
                 <div
                   style={{
-                    backgroundImage: `url(${item.img})`,
-                    backgroundSize: "contain",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    float: i % 2 === 1 ? "right" : "left",
-                    height: "300px",
-                    width: "500px", // <-- unresponsive
-                    borderRadius: "10px",
+                    backgroundImage: `url(${item.img})`, float: i % 2 === 1 ? "right" : "left",
                   }}
+                  className="project-image"
                 />
                 <div
                   className="d-flex flex-column justify-content-center"
@@ -118,7 +112,7 @@ const ProjectPage = ({ history, location }) => {
           </div>
         </div>
 
-        <div className="mt-5 mb-5 p-5 d-flex justify-content-center">
+        {chosenProject.link && <div className="mt-5 mb-5 p-5 d-flex justify-content-center">
           <a
             href={chosenProject.link}
             target="_blank"
@@ -127,7 +121,7 @@ const ProjectPage = ({ history, location }) => {
           >
             check out more information here
           </a>
-        </div>
+        </div>}
 
         {projects
           .filter((p) => p.url !== chosenProject.url)
@@ -158,10 +152,10 @@ const ProjectPage = ({ history, location }) => {
                 }}
               >
                 <div style={{ width: "45%" }}>
-                  <a className="text-medium text-bold">{p.title}</a>
+                  <a className="text-medium text-bold text-white">{p.title}</a>
                 </div>
                 <div style={{ width: "45%" }}>
-                  <span className="text-uppercase text-bold">{p.category}</span>
+                  <span className="text-uppercase text-bold text-white">{p.category}</span>
                 </div>
               </div>
             </div>

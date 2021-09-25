@@ -26,7 +26,7 @@ const ProjectItem = ({ project }) => {
       />
       <p className="text-uppercase mb-2">{project.category}</p>
       <a className="text-medium text-bold project-title">{project.title}</a>
-      <p className="text-bold mt-2">{getTextPreview(project.description, 130)}</p>
+      <p className="text-bold mt-2" style={{ maxWidth: '550px' }}>{getTextPreview(project.description, 130)}</p>
     </Link>
   );
 };
