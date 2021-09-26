@@ -8,10 +8,12 @@ const Nav = ({ location }) => {
 	const mobile = window.innerWidth < 768;
 	const [ showNav, setShowNav ] = useState(mobile || !onHome);
 	const [ transparent, setTransparent ] = useState(onProject);
+	const [showMenu, setShowMenu] = useState(false)
 
 	useEffect(() => {
 		setShowNav(!(onHome && !mobile)); // dont show Nav on home
 		setTransparent(onProject && !mobile);
+		setShowMenu(false)
 
 		const handleScroll = () => {
 			if (!onHome || mobile) return;
@@ -27,19 +29,19 @@ const Nav = ({ location }) => {
 
 	return (
 		<nav className={`page-padding ${showNav ? '' : 'd-none'} ${transparent ? 'bg-transparent' : ''}`}>
-			<Link to="/" className="text-cursive text-small" style={{ color: 'var(--pink)' }}>
+			<Link to="/" className="text-cursive text-small pb-2" style={{ color: 'var(--pink)' }}>
 				zuzanna
 				<br />
 				brzozowska
 			</Link>
 			{mobile ? (
-				<div>
-					<label className="btn-menu" for="checkbox" />
-					<input id="checkbox" type="checkbox" />
-					<span className="btn-menu__bars" />
-					<span className="btn-menu__bars" />
-					<span className="btn-menu__bars" />
-					<div className="box">
+				<div className="p-1 mt-2">
+					<div onClick={() => setShowMenu(!showMenu)}>
+						<span className="btn-menu__bars" />
+						<span className="btn-menu__bars" />
+						<span className="btn-menu__bars" />
+					</div>
+					<div className={`box ${showMenu ? "box--slide-from-right" : ""}`}>
 						<li className="box-item">
 							<Link to="/" className="text-uppercase text-medium position-relative">
 								<span>work</span>

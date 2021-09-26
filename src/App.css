@@ -128,23 +128,6 @@ nav {
 }
 
 /* nav mobile */
-#checkbox {
-  opacity: 0;
-  padding: 20px;
-}
-
-.btn-menu {
-  position: absolute;
-  top: 25px;
-  right: 10px;
-  opacity: 0;
-  z-index: 1;
-  height: 18px;
-  padding: 20px;
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: pointer;
-}
 
 .btn-menu__bars {
   position: relative;
@@ -170,7 +153,7 @@ nav {
   right: -100vw;
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
-#checkbox:focus ~ .box {
+.box--slide-from-right {
   transform: translateX(-100%);
 }
 
@@ -178,7 +161,7 @@ nav {
   list-style: none;
   user-select: none;
   text-align: center;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
 
