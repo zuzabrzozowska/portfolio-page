@@ -18,18 +18,20 @@ const ProjectItem = ({ project }) => {
 	};
 
 	return (
-		<Link className="col-md mb-5" to={`/project/${project.url}`}>
+		<Link className="col-md mb-5 d-flex flex-column align-items-center" to={`/project/${project.url}`}>
 			<div
 				className={`img-project ${shadow ? 'shadow' : ''}`}
 				style={{ backgroundImage: `url(${project.image})` }}
 				onMouseOver={toggleShadow}
 				onMouseLeave={toggleShadow}
 			/>
-			<p className="text-uppercase mb-2">{project.category}</p>
-			<a className="text-medium text-bold project-title">{project.title}</a>
-			<p className="text-bold mt-2 mb-5" style={{ maxWidth: '550px' }}>
-				{getTextPreview(project.description, 130)}
-			</p>
+      <div>
+        <p className="text-uppercase mb-2">{project.category}</p>
+        <a className="text-medium text-bold project-title">{project.title}</a>
+        <p className="text-bold mt-2 mb-5" style={{ maxWidth: '550px' }}>
+          {getTextPreview(project.description, 130)}
+        </p>
+      </div>
 		</Link>
 	);
 };

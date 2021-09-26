@@ -9,15 +9,15 @@ const Footer = () => (
       </a>
     </span>
     <div>
-      <a className="link-smol" href="https://www.linkedin.com/in/zuzanna-brzozowska-94a497110/" target="_blank">
+      <a className="link-smol" rel="noreferrer" href="https://www.linkedin.com/in/zuzanna-brzozowska-94a497110/" target="_blank">
         linkedin
       </a>
       <span className="ml-2 mr-2">·</span>
-      <a className="link-smol" href="https://github.com/zuzabrzozowska" target="_blank">
+      <a className="link-smol" rel="noreferrer" href="https://github.com/zuzabrzozowska" target="_blank">
         github
       </a>
       <span className="ml-2 mr-2">·</span>
-      <a className="link-smol" href="https://instagram.com/zuzanna.dev" target="_blank">
+      <a className="link-smol" rel="noreferrer" href="https://instagram.com/zuzanna.dev" target="_blank">
         instagram
       </a>
     </div>

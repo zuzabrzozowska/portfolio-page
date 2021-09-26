@@ -127,6 +127,61 @@ nav {
   background-image: url("./assets/nav-line.png");
 }
 
+/* nav mobile */
+#checkbox {
+  opacity: 0;
+  padding: 20px;
+}
+
+.btn-menu {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  opacity: 0;
+  z-index: 1;
+  height: 18px;
+  padding: 20px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.btn-menu__bars {
+  position: relative;
+  top: -10px;
+  display: block;
+  background-color: black;
+  border-radius: 15%;
+  width: 25px;
+  height: 2px;
+  margin: 5px;
+}
+
+.box {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--eggshell);
+  width: 100vw;
+  min-height: 100px;
+  top: 80px;
+  right: -100vw;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+#checkbox:focus ~ .box {
+  transform: translateX(-100%);
+}
+
+.box-item {
+  list-style: none;
+  user-select: none;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+
 footer {
   padding: 100px 0 30px;
   display: flex;
@@ -214,8 +269,8 @@ footer span,
 }
 
 .img-text--1 {
-  height: 90px;
-  width: 70px;
+  height: 77px;
+  width: 60px;
   background-size: contain;
   background-image: url("/src/assets/plock-mini.png");
 }

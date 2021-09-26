@@ -46,6 +46,7 @@ const Work = () => {
             {!mobile ? <br /> : <> </>}in płock{" "}
             <a
               href="https://en.wikipedia.org/wiki/P%C5%82ock"
+              rel="noreferrer"
               target="_blank"
               onMouseLeave={removeAnimation}
             >

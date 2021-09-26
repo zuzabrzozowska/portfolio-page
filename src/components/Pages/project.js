@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, withRouter, Link } from "react-router-dom";
 import projects from "../../assets/projects/projectsList";
 
@@ -116,6 +116,7 @@ const ProjectPage = ({ history, location }) => {
           <a
             href={chosenProject.link}
             target="_blank"
+            rel="noreferrer"
           >
             <span className="text-serif text-large text-center" style={{ borderBottomWidth: "1.5px", borderStyle: "solid", lineHeight: "inherit" }}>check out more information here</span>
           </a>
