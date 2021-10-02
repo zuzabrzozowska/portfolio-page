@@ -106,7 +106,7 @@ const projectsList = [
 		year: 'August 2020 - now',
 		description:
 			'Mentioned by BestStartup.eu as one of Sweden\'s top startups, WeTal has been successfully matching developers with jobs since 2019. I joined the company in August 2020 as an intern and the first employee, and quickly grew into a mid-level role, delivering new features and bug fixing in the speed of light. ⚡️',
-		url: 'abc',
+		url: 'wetal',
 		stack: [ 'React', 'Express', 'Redux', 'Node.js', 'MongoDB', 'JavaScript', 'Sass', 'Twilio', 'Stripe API' ],
 		link: 'https://wetal.com',
 		gallery: [
